@@ -1,0 +1,23 @@
+spring:
+  # JPA settings
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+
+  # H2 DB DataSource
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+
+logging:
+  level:
+    root: info
+
+    # jpa hibernate? ???? sql? ??? ??? ???? ?? ??
+    org.hibernate.sql: debug # hibernate ? ??? ?? ??? debug??? ??
+    org.hibernate.type: trace # ?? ???? ????? ???? ??
